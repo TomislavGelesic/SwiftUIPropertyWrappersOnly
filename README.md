@@ -46,6 +46,6 @@
  2) Navigation flow with passing data forw-backw in setup StartView-MediatorView-FinalView.  
 In which data is presented on StartView and changed in FinalView.        
 MediatorView and FinalView are dismissed withouth transitions between.          
- 3) Data presented on MediatorView is always re-rendered (core paradigm of and goal of usage of SwiftUI) but data is consistent because it comes from @Environment instance.     
+ 3) Data presented on *View* is always re-rendered (core paradigm of and goal of usage of SwiftUI) but data is consistent because it comes from @Environment instance.     
  
  
