@@ -22,22 +22,22 @@
  Happy to hear arguments against these thoughts/statements - will argue back and change my opinion if yours arguments are stronger/better :)
  
  
- ##  VIPER  
+ ##  VIPER
  
- - *Router*  is implementation of principle - inversion of control, knows how to create each **View** with everything needed for that *View* to live happily.
+ - *Router*  is implementation of principle - inversion of control, knows how to create each *View* with everything needed for that *View* to live happily.
  
  - *Entity* is object containing/wrapping/uniting all variables.
- - Multiple entities enable syntacticall /  logic separation of concerns.
+  Multiple entities enable syntacticall /  logic separation of concerns.
  
  - *Interactor* is point of interaction for various presenters to handle user interaction with app/feature.
- - Multiple interactors enable syntacticall / logical separation of concerns (preceeded by multiple *Entity* instances).
+  Multiple interactors enable syntacticall / logical separation of concerns (preceeded by multiple *Entity* instances).
  
  - *Presenter* is instance, wrapped in @ObservableObject that triggers UI changes.
- - Multiple presenters enable syntactically / logical separation of concerns (for each *View* where **View** is lowest hierarchical UI unit we want to control dinamically in feature).
+  Multiple presenters enable syntactically / logical separation of concerns (for each *View* where **View** is lowest hierarchical UI unit we want to control dinamically in feature).
  
  - *View* is lowest hierarchical UI unit (e.g. SwiftUI View subview) we want to control dinamically in feature.
- - Multiple views, well, you get that part by now hopefully.
- - Multiple views, all passive UI elements, are grouped in (theirs) parent *View* which is controlled by respective *Presenter* instance.
+  Multiple views, well, you get that part by now hopefully.
+  Multiple views, all passive UI elements, are grouped in (theirs) parent *View* which is controlled by respective *Presenter* instance.
  
  
  ##  EXAMPLES  
