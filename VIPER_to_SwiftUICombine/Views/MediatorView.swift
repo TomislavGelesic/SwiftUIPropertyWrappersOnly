@@ -5,8 +5,7 @@
 import SwiftUI
 
 struct MediatorView: View {
-    @EnvironmentObject var navigationItem: HomeNavigationItem
-    @EnvironmentObject var model: Entity
+    @EnvironmentObject var navigation: HomeNavigation
     
     var body: some View {
         VStack {
@@ -14,7 +13,7 @@ struct MediatorView: View {
             Text("This is MediatorView, go on..")
             Spacer()
             Button {
-                navigationItem.type = .finalView
+                navigation.destination = .finalView
             } label: {
                 Text("Go on")
                     .foregroundColor(.green)

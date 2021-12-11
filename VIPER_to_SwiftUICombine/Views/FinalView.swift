@@ -6,7 +6,7 @@ import SwiftUI
 
 struct FinalView: View {
     
-    @EnvironmentObject var navigationItem: HomeNavigationItem
+    @EnvironmentObject var navigation: HomeNavigation
     @ObservedObject var presenter: FinalViewPresenter
     
     var body: some View {
@@ -14,23 +14,40 @@ struct FinalView: View {
             Spacer()
             Text("Select and head back")
             Spacer()
-            createButton(type: .none)
-            createButton(type: .one)
-            createButton(type: .two)
-            createButton(type: .three)
+            buttons()
+            Spacer()
+            
+            if !presenter.interactor.model.ints.isEmpty {
+                Text("You selected: \(presenter.getSelection())")
+                Button {
+                    navigation.destination = .none
+                } label: {
+                    Text("Head back")
+                        .foregroundColor(.green)
+                        .fontWeight(.black)
+                }
+            }
             Spacer()
         }
         .navigationBarTitle("FinalView!", displayMode: .inline)
     }
     
-    func createButton(type: SelectionType) -> some View {
+    func buttons() -> some View {
+        VStack {
+            createButton(type: .none)
+            createButton(type: .one)
+            createButton(type: .two)
+            createButton(type: .three)
+        }
+    }
+    
+    func createButton(type: OptionType) -> some View {
         Button {
             presenter.select(type)
-            navigationItem.type = .none
         } label: {
             Text("Select \(type.rawValue).")
         }
         .padding()
     }
 }
-        
+

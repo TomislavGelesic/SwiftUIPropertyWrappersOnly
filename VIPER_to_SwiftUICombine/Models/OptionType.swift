@@ -4,10 +4,10 @@
 
 import Foundation
 
-public enum SelectionType: String {
+public enum OptionType: String {
     
     case none, one, two, three
 }
 
-extension SelectionType: CaseIterable { }
+extension OptionType: CaseIterable { }
 

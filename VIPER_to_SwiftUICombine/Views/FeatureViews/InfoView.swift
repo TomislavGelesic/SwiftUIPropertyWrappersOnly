@@ -6,7 +6,7 @@ import SwiftUI
 
 struct InfoView: View {
     
-    var selection: SelectionType
+    var selection: OptionType
     var ints: [Int]
     
     var body: some View {

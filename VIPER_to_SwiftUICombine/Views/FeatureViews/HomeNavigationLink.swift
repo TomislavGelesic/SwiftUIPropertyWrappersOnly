@@ -7,8 +7,8 @@ import SwiftUI
 struct HomeNavigationLink<DestinationView: View>: View {
     var destinationView: DestinationView
     var navigateBack: () -> ()
-    var tag: HomeNavigationItemType
-    @ObservedObject var selection: HomeNavigationItem
+    var tag: HomeNavigationDestination
+    @ObservedObject var selection: HomeNavigation
     
     var body: some View {
         NavigationLink(
@@ -16,7 +16,7 @@ struct HomeNavigationLink<DestinationView: View>: View {
                 .navigationOverride(actionBack: navigateBack)
                 .environmentObject(selection),
             tag: tag,
-            selection: $selection.type
+            selection: $selection.destination
         ) { EmptyView() }
     }
 }

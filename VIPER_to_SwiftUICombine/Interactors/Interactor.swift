@@ -15,8 +15,8 @@ public class Interactor: ObservableObject {
 
 // DetailViewPresenter methods
 public extension Interactor {
-    func select(_ selection: SelectionType) {
-        model.selection = selection
+    func select(_ selection: OptionType) {
+        model.option = selection
         switch selection {
         case .none:
             model.ints = .init()

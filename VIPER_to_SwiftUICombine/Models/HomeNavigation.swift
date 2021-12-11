@@ -4,6 +4,6 @@
 
 import SwiftUI
 
-class HomeNavigationItem: ObservableObject {
-    @Published var type: HomeNavigationItemType? = nil
+class HomeNavigation: ObservableObject {
+    @Published var destination: HomeNavigationDestination? = nil
 }

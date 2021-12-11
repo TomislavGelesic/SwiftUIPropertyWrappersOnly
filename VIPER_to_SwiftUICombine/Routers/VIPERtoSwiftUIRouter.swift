@@ -4,13 +4,13 @@
 
 import SwiftUI
 
-class HomeViewRouter {
+class VIPERtoSwiftUIRouter {
     
-    func makeMediatorView() -> some View {
+    static func makeMediatorView() -> some View {
         MediatorView()
     }
     
-    func makeFinalView(model: Entity) -> some View {
+    static func makeFinalView(model: Entity) -> some View {
         FinalView(presenter: FinalViewPresenter(interactor: Interactor(model: model)))
     }
 }

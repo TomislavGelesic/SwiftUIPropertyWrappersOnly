@@ -8,7 +8,7 @@ class HomeViewPresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = .init()
     
     @Published var ints: [Int] = .init()
-    @Published var selection: SelectionType = .none
+    @Published var option: OptionType = .none
     
     init(interactor: Interactor) {
         self.interactor = interactor
@@ -20,8 +20,8 @@ class HomeViewPresenter: ObservableObject {
             .assign(to: \.ints, on: self)
             .store(in: &cancellables)
         
-        interactor.model.$selection
-            .assign(to: \.selection, on: self)
+        interactor.model.$option
+            .assign(to: \.option, on: self)
             .store(in: &cancellables)
     }
 }

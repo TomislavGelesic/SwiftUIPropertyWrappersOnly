@@ -3,11 +3,11 @@ import Foundation
 
 public class Entity {
     @Published var ints: [Int]
-    @Published var selection: SelectionType
+    @Published var option: OptionType
     
-    public init(ints: [Int] = .init(), selection: SelectionType = .none) {
+    public init(ints: [Int] = .init(), option: OptionType = .none) {
         self.ints = ints
-        self.selection = selection
+        self.option = option
     }
 }
 

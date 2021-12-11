@@ -4,6 +4,6 @@
 
 import Foundation
 
-enum HomeNavigationItemType {
+enum HomeNavigationDestination {
     case mediatorView, finalView
 }
