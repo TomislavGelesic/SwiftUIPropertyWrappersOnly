@@ -4,13 +4,9 @@
 
 import SwiftUI
 
-class VIPERtoSwiftUIRouter {
+// Naming should be expanded on additional NavigationStacks.
+class MainState: ObservableObject {
     
-    static func makeMediatorView() -> some View {
-        MediatorView()
-    }
-    
-    static func makeFinalView(model: Entity) -> some View {
-        FinalView(presenter: FinalViewPresenter(interactor: Interactor(model: model)))
-    }
+    @Published var destination: NavigationDestination?
+    @Published var sheetItem: NavigationSheetItem?
 }

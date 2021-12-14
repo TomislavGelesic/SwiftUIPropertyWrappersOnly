@@ -4,10 +4,8 @@
 
 import Foundation
 
-public enum OptionType: String {
-    
-    case none, one, two, three
+enum FinalViewEvent {
+    case goToHomeView
+    case goBack
+    case select(IntSelectionOption, MainDataModel)
 }
-
-extension OptionType: CaseIterable { }
-

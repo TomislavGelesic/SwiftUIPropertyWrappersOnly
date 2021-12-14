@@ -2,8 +2,11 @@
 // Research Industrial Systems Engineering (RISE) Forschungs-, Entwicklungs- und Großprojektberatung GmbH,
 // soweit nicht im Folgenden näher gekennzeichnet.
 
-import SwiftUI
+import Foundation
 
-class HomeNavigation: ObservableObject {
-    @Published var destination: HomeNavigationDestination? = nil
+enum HomeViewEvent {
+    case goToMediatorView
+    case goToMediatorViewSecondSheet
+    case goToMediatorViewFirstSheet
+    case dismissSheet(NavigationSheetItem?)
 }

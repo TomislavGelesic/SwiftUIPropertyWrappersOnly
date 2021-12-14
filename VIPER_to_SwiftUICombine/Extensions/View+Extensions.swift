@@ -14,4 +14,13 @@ extension View {
                         .padding()
                 })
     }
+    
+    func hiddenNavigationLink<TargetView: View>(_ view: TargetView) -> some View {
+        background(
+            ZStack {
+                view
+                self
+            }
+        )
+    }
 }

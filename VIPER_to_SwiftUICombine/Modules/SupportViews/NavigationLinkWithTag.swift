@@ -4,19 +4,19 @@
 
 import SwiftUI
 
-struct HomeNavigationLink<DestinationView: View>: View {
+struct NavigationLinkWithTag<DestinationView: View>: View {
     var destinationView: DestinationView
-    var navigateBack: () -> ()
-    var tag: HomeNavigationDestination
-    @ObservedObject var selection: HomeNavigation
+    var tag: NavigationDestination
+    @ObservedObject var state: MainState
+    @ObservedObject var data: MainDataModel
     
     var body: some View {
         NavigationLink(
             destination: destinationView
-                .navigationOverride(actionBack: navigateBack)
-                .environmentObject(selection),
+                .environmentObject(state)
+                .environmentObject(data),
             tag: tag,
-            selection: $selection.destination
+            selection: $state.destination
         ) { EmptyView() }
     }
 }

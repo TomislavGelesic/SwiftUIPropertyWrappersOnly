@@ -4,6 +4,10 @@
 
 import Foundation
 
-enum HomeNavigationDestination {
-    case mediatorView, finalView
+public enum IntSelectionOption: String {
+    
+    case none, one, two, three
 }
+
+extension IntSelectionOption: CaseIterable { }
+
