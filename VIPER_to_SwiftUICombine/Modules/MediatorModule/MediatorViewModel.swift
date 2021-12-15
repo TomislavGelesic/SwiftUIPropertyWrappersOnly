@@ -4,7 +4,7 @@
 
 import Foundation
 
-class MediatorViewPresenter {
+class MediatorViewModel {
     func handleEvent(event: MediatorViewEvent, navigationControl: MainNavigationControl, sheetControl: MainSheetControl) {
         switch event {
         case .goBack:

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		600AEFBD2768FE07007874AA /* NavigationSheetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AEFBC2768FE07007874AA /* NavigationSheetItem.swift */; };
 		600AEFBF27690646007874AA /* HomeViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AEFBE27690646007874AA /* HomeViewEvent.swift */; };
-		600AEFC427690E36007874AA /* MediatorViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AEFC327690E36007874AA /* MediatorViewPresenter.swift */; };
+		600AEFC427690E36007874AA /* MediatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AEFC327690E36007874AA /* MediatorViewModel.swift */; };
 		600AEFC727690ECA007874AA /* MediatorViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AEFC627690ECA007874AA /* MediatorViewEvent.swift */; };
 		600AEFCA27691135007874AA /* FinalViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AEFC927691135007874AA /* FinalViewEvent.swift */; };
 		60EA203527638095004B589C /* VIPER_to_SwiftUICombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA203427638095004B589C /* VIPER_to_SwiftUICombineApp.swift */; };
@@ -19,10 +19,10 @@
 		60EA20492763814B004B589C /* MainDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA20482763814B004B589C /* MainDataModel.swift */; };
 		60EA204B27638183004B589C /* MediatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA204A27638183004B589C /* MediatorView.swift */; };
 		60EA204D2763818C004B589C /* FinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA204C2763818C004B589C /* FinalView.swift */; };
-		60EA205327638B9A004B589C /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA205227638B9A004B589C /* HomeViewPresenter.swift */; };
+		60EA205327638B9A004B589C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA205227638B9A004B589C /* HomeViewModel.swift */; };
 		60EA205927638CF5004B589C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA205827638CF5004B589C /* View+Extensions.swift */; };
 		60EA205E27639336004B589C /* IntSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA205D27639336004B589C /* IntSelectionOption.swift */; };
-		60EA2062276487EC004B589C /* FinalViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA2061276487EC004B589C /* FinalViewPresenter.swift */; };
+		60EA2062276487EC004B589C /* FinalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA2061276487EC004B589C /* FinalViewModel.swift */; };
 		60EA2067276517F9004B589C /* NavigationLinkWithTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA2066276517F9004B589C /* NavigationLinkWithTag.swift */; };
 		60EA20692765182F004B589C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA20682765182F004B589C /* InfoView.swift */; };
 		60EA206B27651858004B589C /* MainNavigationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA206A27651858004B589C /* MainNavigationControl.swift */; };
@@ -33,7 +33,7 @@
 /* Begin PBXFileReference section */
 		600AEFBC2768FE07007874AA /* NavigationSheetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSheetItem.swift; sourceTree = "<group>"; };
 		600AEFBE27690646007874AA /* HomeViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewEvent.swift; sourceTree = "<group>"; };
-		600AEFC327690E36007874AA /* MediatorViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorViewPresenter.swift; sourceTree = "<group>"; };
+		600AEFC327690E36007874AA /* MediatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorViewModel.swift; sourceTree = "<group>"; };
 		600AEFC627690ECA007874AA /* MediatorViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorViewEvent.swift; sourceTree = "<group>"; };
 		600AEFC927691135007874AA /* FinalViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewEvent.swift; sourceTree = "<group>"; };
 		60EA203127638095004B589C /* VIPER_to_SwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER_to_SwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,10 +44,10 @@
 		60EA20482763814B004B589C /* MainDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataModel.swift; sourceTree = "<group>"; };
 		60EA204A27638183004B589C /* MediatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorView.swift; sourceTree = "<group>"; };
 		60EA204C2763818C004B589C /* FinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalView.swift; sourceTree = "<group>"; };
-		60EA205227638B9A004B589C /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		60EA205227638B9A004B589C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		60EA205827638CF5004B589C /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		60EA205D27639336004B589C /* IntSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntSelectionOption.swift; sourceTree = "<group>"; };
-		60EA2061276487EC004B589C /* FinalViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewPresenter.swift; sourceTree = "<group>"; };
+		60EA2061276487EC004B589C /* FinalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewModel.swift; sourceTree = "<group>"; };
 		60EA2066276517F9004B589C /* NavigationLinkWithTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkWithTag.swift; sourceTree = "<group>"; };
 		60EA20682765182F004B589C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		60EA206A27651858004B589C /* MainNavigationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationControl.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				600AEFBE27690646007874AA /* HomeViewEvent.swift */,
-				60EA205227638B9A004B589C /* HomeViewPresenter.swift */,
+				60EA205227638B9A004B589C /* HomeViewModel.swift */,
 				60EA203627638095004B589C /* HomeView.swift */,
 			);
 			path = HomeModule;
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				60EA204A27638183004B589C /* MediatorView.swift */,
-				600AEFC327690E36007874AA /* MediatorViewPresenter.swift */,
+				600AEFC327690E36007874AA /* MediatorViewModel.swift */,
 				600AEFC627690ECA007874AA /* MediatorViewEvent.swift */,
 			);
 			path = MediatorModule;
@@ -100,7 +100,7 @@
 		600AEFC827691057007874AA /* FinalModule */ = {
 			isa = PBXGroup;
 			children = (
-				60EA2061276487EC004B589C /* FinalViewPresenter.swift */,
+				60EA2061276487EC004B589C /* FinalViewModel.swift */,
 				60EA204C2763818C004B589C /* FinalView.swift */,
 				600AEFC927691135007874AA /* FinalViewEvent.swift */,
 			);
@@ -248,14 +248,14 @@
 				60EA20492763814B004B589C /* MainDataModel.swift in Sources */,
 				60F8DC842769DF21000DD000 /* MainSheetControl.swift in Sources */,
 				60EA206D27651873004B589C /* NavigationDestination.swift in Sources */,
-				60EA2062276487EC004B589C /* FinalViewPresenter.swift in Sources */,
+				60EA2062276487EC004B589C /* FinalViewModel.swift in Sources */,
 				60EA205927638CF5004B589C /* View+Extensions.swift in Sources */,
 				600AEFC727690ECA007874AA /* MediatorViewEvent.swift in Sources */,
 				60EA204B27638183004B589C /* MediatorView.swift in Sources */,
-				60EA205327638B9A004B589C /* HomeViewPresenter.swift in Sources */,
+				60EA205327638B9A004B589C /* HomeViewModel.swift in Sources */,
 				60EA203727638095004B589C /* HomeView.swift in Sources */,
 				600AEFCA27691135007874AA /* FinalViewEvent.swift in Sources */,
-				600AEFC427690E36007874AA /* MediatorViewPresenter.swift in Sources */,
+				600AEFC427690E36007874AA /* MediatorViewModel.swift in Sources */,
 				60EA2067276517F9004B589C /* NavigationLinkWithTag.swift in Sources */,
 				60EA206B27651858004B589C /* MainNavigationControl.swift in Sources */,
 				600AEFBD2768FE07007874AA /* NavigationSheetItem.swift in Sources */,

@@ -5,7 +5,7 @@
 import Combine
 import SwiftUI
 
-class FinalViewPresenter {
+class FinalViewModel {
     
     func handleEvent(event: FinalViewEvent, navigationControl: MainNavigationControl) {
         switch event {

@@ -8,7 +8,7 @@ struct FinalView: View {
     
     @EnvironmentObject var mainNavigationControl: MainNavigationControl
     @EnvironmentObject var mainData: MainDataModel
-    let presenter: FinalViewPresenter = .init()
+    let viewModel: FinalViewModel = .init()
     
     var body: some View {
         VStack {
@@ -17,10 +17,10 @@ struct FinalView: View {
             Spacer()
             buttons()
             Spacer()
-            if presenter.hasData(mainData) {
-                Text("You selected: \(presenter.getSelection(mainData))")
+            if viewModel.hasData(mainData) {
+                Text("You selected: \(viewModel.getSelection(mainData))")
                 Button {
-                    presenter.handleEvent(
+                    viewModel.handleEvent(
                         event: .goToHomeView,
                         navigationControl: mainNavigationControl)
                 } label: {
@@ -33,7 +33,7 @@ struct FinalView: View {
         }
         .navigationBarTitle("FinalView!", displayMode: .inline)
         .navigationOverride(actionBack: {
-            presenter.handleEvent(
+            viewModel.handleEvent(
                 event: .goBack,
                 navigationControl: mainNavigationControl
             )
@@ -51,7 +51,7 @@ struct FinalView: View {
     
     func createButton(type: IntSelectionOption) -> some View {
         Button {
-            presenter.handleEvent(
+            viewModel.handleEvent(
                 event: .update(type, on: mainData),
                 navigationControl: mainNavigationControl
             )

@@ -10,14 +10,26 @@ struct VIPER_to_SwiftUICombineApp: App {
     @StateObject var mainNavigationControl: MainNavigationControl = .init()
     @StateObject var mainData: MainDataModel = .init()
     @StateObject var mainSheetControl: MainSheetControl = .init()
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            IntegratorView {
                 HomeView()
                     .environmentObject(mainNavigationControl)
                     .environmentObject(mainSheetControl)
                     .environmentObject(mainData)
             }
+        }
+    }
+}
+
+
+struct IntegratorView<Content: View>: View {
+    var content: () -> Content
+    
+    var body: some View {
+        NavigationView {
+            content()
         }
     }
 }

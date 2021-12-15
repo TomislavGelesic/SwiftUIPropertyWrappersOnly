@@ -8,14 +8,14 @@ struct HomeView: View {
     @EnvironmentObject var mainNavigationControl: MainNavigationControl
     @EnvironmentObject var mainData: MainDataModel
     @EnvironmentObject var mainSheetControl: MainSheetControl
-    let presenter: HomeViewPresenter = .init()
+    let viewModel: HomeViewModel = .init()
     
     var body: some View {
         VStack {
             Spacer()
             InfoView(
-                titleText: presenter.createInfoViewTitleText(from: mainData),
-                descriptionText: presenter.createInfoViewDescriptionText(from: mainData)
+                titleText: viewModel.createInfoViewTitleText(from: mainData),
+                descriptionText: viewModel.createInfoViewDescriptionText(from: mainData)
             )
             Spacer()
             createButtons()
@@ -27,7 +27,7 @@ struct HomeView: View {
         .sheet(
             item: $mainSheetControl.sheetItem,
             onDismiss: {
-                presenter.handleEvent(
+                viewModel.handleEvent(
                     event: .dismissSheet(mainSheetControl.sheetItem),
                     navigationControl: mainNavigationControl,
                     sheetControl: mainSheetControl
@@ -65,7 +65,7 @@ struct HomeView: View {
         VStack {
             
             Button {
-                presenter.handleEvent(
+                viewModel.handleEvent(
                     event: .goToMediatorView,
                     navigationControl: mainNavigationControl,
                     sheetControl: mainSheetControl
@@ -75,7 +75,7 @@ struct HomeView: View {
             }
             
             Button {
-                presenter.handleEvent(
+                viewModel.handleEvent(
                     event: .goToMediatorViewFirstSheet,
                     navigationControl: mainNavigationControl,
                     sheetControl: mainSheetControl
@@ -85,7 +85,7 @@ struct HomeView: View {
             }
             
             Button {
-                presenter.handleEvent(
+                viewModel.handleEvent(
                     event: .goToMediatorViewSecondSheet,
                     navigationControl: mainNavigationControl,
                     sheetControl: mainSheetControl

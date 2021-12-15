@@ -2,7 +2,7 @@
 import Combine
 import SwiftUI
 
-class HomeViewPresenter {
+class HomeViewModel {
     
     public func createInfoViewTitleText(from data: MainDataModel) -> String {
         "Selection \(calculateAdditionalText(from: data.intSelectionOption))"
