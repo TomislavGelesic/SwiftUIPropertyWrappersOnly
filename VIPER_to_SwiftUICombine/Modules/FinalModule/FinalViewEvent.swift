@@ -7,5 +7,5 @@ import Foundation
 enum FinalViewEvent {
     case goToHomeView
     case goBack
-    case select(IntSelectionOption, MainDataModel)
+    case update(IntSelectionOption, on: MainDataModel)
 }

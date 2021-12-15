@@ -5,15 +5,21 @@
 import SwiftUI
 
 struct MediatorView: View {
-    @EnvironmentObject var mainState: MainState
+    @EnvironmentObject var mainNavigationControl: MainNavigationControl
+    @EnvironmentObject var mainSheetControl: MainSheetControl
     let presenter: MediatorViewPresenter = .init()
+    
     var body: some View {
         VStack {
             Spacer()
             Text("This is MediatorView, go on..")
             Spacer()
             Button {
-                presenter.handleEvent(event: .goToFinalView, state: mainState)
+                presenter.handleEvent(
+                    event: .goToFinalView,
+                    navigationControl: mainNavigationControl,
+                    sheetControl: mainSheetControl
+                )
             } label: {
                 Text("Go on")
                     .foregroundColor(.green)
@@ -23,7 +29,11 @@ struct MediatorView: View {
         }
         .navigationBarTitle("MediatorView", displayMode: .inline)
         .navigationOverride(actionBack: {
-            presenter.handleEvent(event: .goBack, state: mainState)
+            presenter.handleEvent(
+                event: .goBack,
+                navigationControl: mainNavigationControl,
+                sheetControl: mainSheetControl
+            )
         })
     }
 }

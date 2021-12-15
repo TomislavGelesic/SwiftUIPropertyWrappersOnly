@@ -5,15 +5,15 @@
 import Foundation
 
 class MediatorViewPresenter {
-    func handleEvent(event: MediatorViewEvent, state: MainState) {
+    func handleEvent(event: MediatorViewEvent, navigationControl: MainNavigationControl, sheetControl: MainSheetControl) {
         switch event {
         case .goBack:
-            state.sheetItem = nil
-            state.destination = nil
+            sheetControl.sheetItem = nil
+            navigationControl.destination = nil
         case .goToFinalView:
-            state.destination = .finalView
+            navigationControl.destination = .finalView
         case .dismissSheet:
-            state.sheetItem = nil
+            sheetControl.sheetItem = nil
         }
     }
 }

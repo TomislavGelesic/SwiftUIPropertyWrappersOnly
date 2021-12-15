@@ -4,9 +4,7 @@
 
 import SwiftUI
 
-// Naming should be expanded on additional NavigationStacks.
-class MainState: ObservableObject {
+class MainSheetControl: ObservableObject {
     
-    @Published var destination: NavigationDestination?
     @Published var sheetItem: NavigationSheetItem?
 }

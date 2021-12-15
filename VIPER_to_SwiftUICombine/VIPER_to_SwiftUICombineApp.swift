@@ -7,13 +7,15 @@ import SwiftUI
 @main
 struct VIPER_to_SwiftUICombineApp: App {
     
-    @StateObject var mainState: MainState = .init()
+    @StateObject var mainNavigationControl: MainNavigationControl = .init()
     @StateObject var mainData: MainDataModel = .init()
+    @StateObject var mainSheetControl: MainSheetControl = .init()
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 HomeView()
-                    .environmentObject(mainState)
+                    .environmentObject(mainNavigationControl)
+                    .environmentObject(mainSheetControl)
                     .environmentObject(mainData)
             }
         }

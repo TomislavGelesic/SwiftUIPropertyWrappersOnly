@@ -7,13 +7,13 @@ import SwiftUI
 
 class FinalViewPresenter {
     
-    public func handleEvent(event: FinalViewEvent, state: MainState) {
+    func handleEvent(event: FinalViewEvent, navigationControl: MainNavigationControl) {
         switch event {
         case .goToHomeView:
-            state.destination = nil
+            navigationControl.destination = nil
         case .goBack:
-            state.destination = .mediatorView
-        case .select(let newOption, let data):
+            navigationControl.destination = .mediatorView
+        case .update(let newOption, let data):
             data.intSelectionOption = newOption
             data.ints = getInts(for: newOption)
             

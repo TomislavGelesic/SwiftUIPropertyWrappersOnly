@@ -12,30 +12,30 @@ class HomeViewPresenter {
         intsToString(data.ints) ?? ""
     }
     
-    public func handleEvent(event: HomeViewEvent, state: MainState) {
+    func handleEvent(event: HomeViewEvent, navigationControl: MainNavigationControl, sheetControl: MainSheetControl) {
         switch event {
         case .goToMediatorView:
-            state.destination = .mediatorView
-            state.sheetItem = nil
+            navigationControl.destination = .mediatorView
+            sheetControl.sheetItem = nil
         case .goToMediatorViewFirstSheet:
-            state.destination = .mediatorView
-            state.sheetItem = .init(id: .mediatorSheetFirst)
+            navigationControl.destination = .mediatorView
+            sheetControl.sheetItem = .init(id: .mediatorSheetFirst)
         case .goToMediatorViewSecondSheet:
-            state.destination = .mediatorView
-            state.sheetItem = .init(id: .mediatorSheetSecond)
+            navigationControl.destination = .mediatorView
+            sheetControl.sheetItem = .init(id: .mediatorSheetSecond)
         case .dismissSheet(let sheetItem):
             if let sheetItem = sheetItem {
                 switch sheetItem.id {
                 case .mediatorSheetFirst:
-                    state.destination = .mediatorView
-                    state.sheetItem = .init(id: .mediatorSheetSecond)
+                    navigationControl.destination = .mediatorView
+                    sheetControl.sheetItem = .init(id: .mediatorSheetSecond)
                 case .mediatorSheetSecond:
-                    state.destination = .mediatorView
-                    state.sheetItem = nil
+                    navigationControl.destination = .mediatorView
+                    sheetControl.sheetItem = nil
                 }
             } else {
-                state.destination = .mediatorView
-                state.sheetItem = sheetItem
+                navigationControl.destination = .mediatorView
+                sheetControl.sheetItem = sheetItem
             }
         }
     }

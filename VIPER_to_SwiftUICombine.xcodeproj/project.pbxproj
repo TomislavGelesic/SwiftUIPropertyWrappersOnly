@@ -25,8 +25,9 @@
 		60EA2062276487EC004B589C /* FinalViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA2061276487EC004B589C /* FinalViewPresenter.swift */; };
 		60EA2067276517F9004B589C /* NavigationLinkWithTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA2066276517F9004B589C /* NavigationLinkWithTag.swift */; };
 		60EA20692765182F004B589C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA20682765182F004B589C /* InfoView.swift */; };
-		60EA206B27651858004B589C /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA206A27651858004B589C /* MainState.swift */; };
+		60EA206B27651858004B589C /* MainNavigationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA206A27651858004B589C /* MainNavigationControl.swift */; };
 		60EA206D27651873004B589C /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA206C27651873004B589C /* NavigationDestination.swift */; };
+		60F8DC842769DF21000DD000 /* MainSheetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F8DC832769DF21000DD000 /* MainSheetControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +50,9 @@
 		60EA2061276487EC004B589C /* FinalViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewPresenter.swift; sourceTree = "<group>"; };
 		60EA2066276517F9004B589C /* NavigationLinkWithTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkWithTag.swift; sourceTree = "<group>"; };
 		60EA20682765182F004B589C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		60EA206A27651858004B589C /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		60EA206A27651858004B589C /* MainNavigationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationControl.swift; sourceTree = "<group>"; };
 		60EA206C27651873004B589C /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		60F8DC832769DF21000DD000 /* MainSheetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSheetControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,9 +166,10 @@
 			children = (
 				60EA20482763814B004B589C /* MainDataModel.swift */,
 				60EA205D27639336004B589C /* IntSelectionOption.swift */,
-				60EA206A27651858004B589C /* MainState.swift */,
+				60EA206A27651858004B589C /* MainNavigationControl.swift */,
 				60EA206C27651873004B589C /* NavigationDestination.swift */,
 				600AEFBC2768FE07007874AA /* NavigationSheetItem.swift */,
+				60F8DC832769DF21000DD000 /* MainSheetControl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				60EA205E27639336004B589C /* IntSelectionOption.swift in Sources */,
 				60EA20492763814B004B589C /* MainDataModel.swift in Sources */,
+				60F8DC842769DF21000DD000 /* MainSheetControl.swift in Sources */,
 				60EA206D27651873004B589C /* NavigationDestination.swift in Sources */,
 				60EA2062276487EC004B589C /* FinalViewPresenter.swift in Sources */,
 				60EA205927638CF5004B589C /* View+Extensions.swift in Sources */,
@@ -253,7 +257,7 @@
 				600AEFCA27691135007874AA /* FinalViewEvent.swift in Sources */,
 				600AEFC427690E36007874AA /* MediatorViewPresenter.swift in Sources */,
 				60EA2067276517F9004B589C /* NavigationLinkWithTag.swift in Sources */,
-				60EA206B27651858004B589C /* MainState.swift in Sources */,
+				60EA206B27651858004B589C /* MainNavigationControl.swift in Sources */,
 				600AEFBD2768FE07007874AA /* NavigationSheetItem.swift in Sources */,
 				60EA203527638095004B589C /* VIPER_to_SwiftUICombineApp.swift in Sources */,
 				60EA20692765182F004B589C /* InfoView.swift in Sources */,
