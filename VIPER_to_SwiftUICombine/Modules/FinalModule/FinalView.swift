@@ -6,8 +6,9 @@ import SwiftUI
 
 struct FinalView: View {
     
-    @EnvironmentObject var navigation: HomeNavigation
-    @ObservedObject var presenter: FinalViewPresenter
+    @EnvironmentObject var mainNavigationControl: MainNavigationControl
+    @EnvironmentObject var mainData: MainDataModel
+    let viewModel: FinalViewModel = .init()
     
     var body: some View {
         VStack {
@@ -16,11 +17,12 @@ struct FinalView: View {
             Spacer()
             buttons()
             Spacer()
-            
-            if !presenter.interactor.model.ints.isEmpty {
-                Text("You selected: \(presenter.getSelection())")
+            if viewModel.hasData(mainData) {
+                Text("You selected: \(viewModel.getSelection(mainData))")
                 Button {
-                    navigation.destination = .none
+                    viewModel.handleEvent(
+                        event: .goToHomeView,
+                        navigationControl: mainNavigationControl)
                 } label: {
                     Text("Head back")
                         .foregroundColor(.green)
@@ -30,6 +32,12 @@ struct FinalView: View {
             Spacer()
         }
         .navigationBarTitle("FinalView!", displayMode: .inline)
+        .navigationOverride(actionBack: {
+            viewModel.handleEvent(
+                event: .goBack,
+                navigationControl: mainNavigationControl
+            )
+        })
     }
     
     func buttons() -> some View {
@@ -41,9 +49,12 @@ struct FinalView: View {
         }
     }
     
-    func createButton(type: OptionType) -> some View {
+    func createButton(type: IntSelectionOption) -> some View {
         Button {
-            presenter.select(type)
+            viewModel.handleEvent(
+                event: .update(type, on: mainData),
+                navigationControl: mainNavigationControl
+            )
         } label: {
             Text("Select \(type.rawValue).")
         }

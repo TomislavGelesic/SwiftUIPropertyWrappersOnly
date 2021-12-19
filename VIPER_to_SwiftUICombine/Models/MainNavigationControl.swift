@@ -4,13 +4,7 @@
 
 import SwiftUI
 
-class VIPERtoSwiftUIRouter {
-    
-    static func makeMediatorView() -> some View {
-        MediatorView()
-    }
-    
-    static func makeFinalView(model: Entity) -> some View {
-        FinalView(presenter: FinalViewPresenter(interactor: Interactor(model: model)))
-    }
+class MainNavigationControl: ObservableObject {
+    // Optional => when nil, none NavigationLink is active
+    @Published var destination: NavigationDestination?
 }
