@@ -41,7 +41,7 @@ struct HomeView: View {
         )
         
         // ADD NavigationLinks on parent View
-        .hiddenNavigationLink(
+        .hiddenBackgroundView(
             ZStack {
                 NavigationLinkWithTag(
                     destinationView: MediatorView(),

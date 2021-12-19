@@ -15,10 +15,11 @@ extension View {
                 })
     }
     
-    func hiddenNavigationLink<TargetView: View>(_ view: TargetView) -> some View {
+    func hiddenBackgroundView<TargetView: View>(_ view: TargetView) -> some View {
         background(
             ZStack {
                 view
+                    .hidden()
                 self
             }
         )

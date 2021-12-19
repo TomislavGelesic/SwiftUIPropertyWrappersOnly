@@ -14,6 +14,7 @@ struct VIPER_to_SwiftUICombineApp: App {
     var body: some Scene {
         WindowGroup {
             IntegratorView {
+                /// Add _controls_ to feature environment - not whole Navigation stack environment.
                 HomeView()
                     .environmentObject(mainNavigationControl)
                     .environmentObject(mainSheetControl)

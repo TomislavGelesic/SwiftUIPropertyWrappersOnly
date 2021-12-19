@@ -11,9 +11,6 @@ struct NavigationLinkWithTag<DestinationView: View>: View {
     @ObservedObject var sheetControl: MainSheetControl
     @ObservedObject var data: MainDataModel
     
-    #warning("Big Question")
-    // If NavigationLink adds view to navigation stack - why do one must put .environmentObject manually?
-    // "SwiftUI creates new Evnironment for each view - does the view looks into his env and not in parents one??"
     var body: some View {
         NavigationLink(
             destination: destinationView
